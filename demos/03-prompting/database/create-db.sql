@@ -17,4 +17,3 @@ CREATE TABLE Food (
 
     CREATE VIEW FoodItemsUnder10 AS 
     SELECT * FROM Food WHERE price < 10;
-
