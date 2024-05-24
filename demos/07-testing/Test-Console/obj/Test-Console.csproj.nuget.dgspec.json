@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\git-play\\test-console\\Test-Console\\Test-Console.csproj": {}
+    "D:\\git-classes\\github-copilot\\demos\\07-testing\\test-console\\Test-Console.csproj": {}
   },
   "projects": {
-    "d:\\git-play\\test-console\\Test-Console\\Test-Console.csproj": {
+    "D:\\git-classes\\github-copilot\\demos\\07-testing\\test-console\\Test-Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\git-play\\test-console\\Test-Console\\Test-Console.csproj",
+        "projectUniqueName": "D:\\git-classes\\github-copilot\\demos\\07-testing\\test-console\\Test-Console.csproj",
         "projectName": "Test-Console",
-        "projectPath": "d:\\git-play\\test-console\\Test-Console\\Test-Console.csproj",
+        "projectPath": "D:\\git-classes\\github-copilot\\demos\\07-testing\\test-console\\Test-Console.csproj",
         "packagesPath": "C:\\Users\\AlexanderKastil\\.nuget\\packages\\",
-        "outputPath": "d:\\git-play\\test-console\\Test-Console\\obj\\",
+        "outputPath": "D:\\git-classes\\github-copilot\\demos\\07-testing\\test-console\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

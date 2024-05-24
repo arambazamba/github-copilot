@@ -29,13 +29,13 @@ public class Validator
     }
 
     // get a count of the items in a string array. use a for to loop through the array
-    public static int GetCount(string[] input)
+    public static int GetTotal(int[] input)
     {
-        int count = 0;
+        int total = 0;
         for (int i = 0; i < input.Length; i++)
         {
-            count++;
+            total += input[i];
         }
-        return count;
+        return total;
     }
 }
