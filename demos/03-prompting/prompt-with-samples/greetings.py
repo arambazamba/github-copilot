@@ -2,6 +2,7 @@ import datetime
 
 # generate a python code that takes the current time as input using the datetime module
 # and returns the appropriate greeting message based on the current time.
+
 # Example 1: Greeting message for morning
 #Input: 9 AM
 #Output: "Good Morning!"
