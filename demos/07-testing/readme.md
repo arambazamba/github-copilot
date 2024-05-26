@@ -121,3 +121,9 @@ it('should render food items', () => {
     ```
     @workspace how can i import a class ObjectSorter to another file
     ```
+
+- How to run the tests
+
+    ```
+    @workspace how can i run the tests
+    ```    
