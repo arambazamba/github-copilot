@@ -3,8 +3,7 @@
 Companion Material for Class Delivery by [Alexander Kastil](https://www.integrations.at/kontakt-impressum.aspx) containing:
 
   - [Instructor Demos](./demos)
-  - [Requirements / tooling](./tooling)
-  - [Lab VM Setup](./setup)
+  - [Class Setup](./setup)
 
 ## License & Re-Use
 
