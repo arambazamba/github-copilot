@@ -25,10 +25,8 @@ namespace FoodApp
         [HttpGet]
         public ActionResult GetConfig()
         {
-           //access a single key
            var useSQLite = cfg.GetValue<string>("AppSettings:UseSQLite");
            
-           //get string typed config
            var config = cfg.Get<AppConfig>();
            return Ok(config);  
         }
