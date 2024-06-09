@@ -1,12 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FoodContainerComponent } from './food-container.component';
+import { of } from 'rxjs';
+import { FoodService } from '../food.service';
 
 describe('FoodContainerComponent', () => {
   let component: FoodContainerComponent;
   let fixture: ComponentFixture<FoodContainerComponent>;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
+
+    fixture = TestBed.configureTestingModule({
       imports: [FoodContainerComponent]
     }).createComponent(FoodContainerComponent);
 
@@ -15,6 +18,8 @@ describe('FoodContainerComponent', () => {
   });
 
   it('should create', () => {
-    // expect(component).toBeTruthy();
+    expect(component).toBeTruthy();
   });
+
+
 });

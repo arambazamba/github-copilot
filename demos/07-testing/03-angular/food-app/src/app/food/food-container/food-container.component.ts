@@ -27,6 +27,8 @@ export class FoodContainerComponent {
 
   deleteFood(food: FoodItem) {
     console.log('deleting', food);
+    this.food = this.food.filter((f) => f.id !== food.id);
+    this.selected = null;
   }
 
   foodSaved(item: FoodItem) {

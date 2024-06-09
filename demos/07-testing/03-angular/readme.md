@@ -120,3 +120,60 @@ it('should render food items', () => {
 ## food-container.component.spec.ts
 
 ```typescript
+let component: FoodContainerComponent;
+let fixture: ComponentFixture<FoodContainerComponent>;
+let spy: any;
+
+beforeEach(() => {
+  const mockFoodData = [
+    { id: 1, name: 'Pizza', price: 10, calories: 1200 },
+    { id: 2, name: 'Burger', price: 8, calories: 800 },
+    { id: 3, name: 'Salad', price: 6, calories: 300 }
+  ];
+  spy = jasmine.createSpyObj('FoodService', ['getFood']);
+  spy.getFood.and.returnValue(of(mockFoodData));
+
+  fixture = TestBed.configureTestingModule({
+    providers: [{ provide: FoodService, useValue: spy }],
+    imports: [FoodContainerComponent]
+  }).createComponent(FoodContainerComponent);
+
+  component = fixture.componentInstance;
+  fixture.detectChanges();
+});
+
+it('should create', () => {
+  expect(component).toBeTruthy();
+});
+
+it('should select food item', () => {
+  const mockFoodItem = { id: 4, name: 'Pasta', price: 12, calories: 600 };
+  component.selectFood(mockFoodItem);
+  expect(component.selected).toEqual(mockFoodItem);
+});
+
+it('should delete food item', () => {
+  const mockFoodItem = { id: 4, name: 'Pasta', price: 12, calories: 600 };
+  component.food = [mockFoodItem];
+  component.deleteFood(mockFoodItem);
+  expect(component.food).not.toContain(mockFoodItem);
+  expect(component.selected).toBeNull();
+});
+
+it('should save food item', () => {
+  const mockFoodItem = { id: 4, name: 'Pasta', price: 12, calories: 600 };
+  component.foodSaved(mockFoodItem);
+  expect(component.food).toContain(mockFoodItem);
+  expect(component.selected).toBeNull();
+});
+
+it('should update existing food item', () => {
+  const existingFoodItem = { id: 1, name: 'Pizza', price: 10, calories: 1200 };
+  const updatedFoodItem = { id: 1, name: 'Pizza', price: 15, calories: 1200 };
+  component.food = [existingFoodItem];
+  component.foodSaved(updatedFoodItem);
+  expect(component.food).toContain(updatedFoodItem);
+  expect(component.food).not.toContain(existingFoodItem);
+  expect(component.selected).toBeNull();
+});
+```
