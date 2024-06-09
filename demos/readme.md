@@ -1,7 +1,5 @@
 # Demos 
 
-## Modules
-
 - GitHub Copilot Introduction​
 - Copilot and LLMs
 - Prompting
