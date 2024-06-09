@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { NavItem } from './nav-item.model';
 import { NavbarService } from './navbar.service';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-navbar',
@@ -11,11 +11,7 @@ import { NavbarService } from './navbar.service';
 })
 export class NavbarComponent {
   ns = inject(NavbarService);
-  navItems: NavItem[] = [];
+  navItems = toSignal(this.ns.getItems());
 
-  ngOnInit() {
-    this.ns.getItems().subscribe((data) => {
-      this.navItems = data;
-    });
-  }
+
 }

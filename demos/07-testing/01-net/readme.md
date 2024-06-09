@@ -1,42 +1,57 @@
+# .NET Core Testing
 
+Scaffold project:
 
-describe('NavbarService', () => {
-  let service: NavbarService;
-  let httpMock: HttpTestingController;
+``` 
+@workspace /new create a dotnet console app including xunit tests. add a Validator class that hast one static method that checks if a string is a Palindrome and returns a boolean
+```
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [
-        NavbarService
-      ]
-    });
+Run it, notice possible problems, and create it manually and setup testing
 
-    service = TestBed.inject(NavbarService);
-    httpMock = TestBed.inject(HttpTestingController);
-  });
+```
+add nugget packages xunit and .net testing
+```
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+Fix the entry function
 
-  it('should retrieve nav items from API via GET', () => {
-    const dummyNavItems: NavItem[] = [
-      { title: 'Home', url: '/home' },
-      { title: 'About', url: '/about' }
-    ];
+```
+/fix optimize the string to be checked, introduce a variable
+```
 
-    service.getItems().subscribe(navItems => {
-      expect(navItems.length).toBe(2);
-      expect(navItems).toEqual(dummyNavItems);
-    });
+Add validator, add methods to check for even ad to get a count from an array:
 
-    const request = httpMock.expectOne(`${environment.apiUrl}`);
-    expect(request.request.method).toBe('GET');
-    request.flush(dummyNavItems);
-  });
+```c#
+public static class Validator
+{
+    public static bool IsPalindrome(string input)
+    {
+        char[] charArray = input.ToCharArray();
+        Array.Reverse(charArray);
+        string reversedInput = new string(charArray);
+        if (input == reversedInput)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+```
 
-  afterEach(() => {
-    httpMock.verify();
-  });
-});
+- Generate tests for the validator
+
+    ```
+    @workspace /new create a test class for the Validator class. add a test for the IsPalindrome method
+    ```
+
+- Generate test data for data driven testing
+
+    ```
+    @workspace Generate test data for the GetTotal method which can be used for data driven testing
+    ```
+
+    ```
+    @workspace Generate test data for the GetTotal method which can be used for data driven testing including nulls and empty arrays    
+    ```
