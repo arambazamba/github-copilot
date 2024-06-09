@@ -1,0 +1,6 @@
+{
+    "AZURE_OPENAI_ENDPOINT": "https://ai-training-dev826312122475.openai.azure.com/",
+    "AZURE_OPENAI_API_KEY": "",
+    "AZURE_DEPLOYMENT": "gpt-35-turbo-deployment",
+    "API_VERSION": "2024-02-01"
+}

@@ -1,8 +1,5 @@
 # Refactoring & Fixing Errors ​
 
-## Introduction to Dapr
-
-
 ## Setting up our test project
 
 Scaffold project:

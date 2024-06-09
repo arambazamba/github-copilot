@@ -4,6 +4,10 @@
 
 ### GitHub Copilot Introduction​
 
+### Copilot and LLMs
+
+### Prompting
+
 ### Generate Code using GitHub Copilot​
 
 ### Refactoring, Fixing Errors ​& Reducing Repetitive Tasks​
@@ -12,4 +16,4 @@
 
 ### Testing using Copilot​
 
-### Using GitHub Copilot in Advanced Scenarios​
+### Deployment
